@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Analysis - CQ.05</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f9fafb;
+        color: #333;
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("https://ctsv.tdmu.edu.vn/wp-content/uploads/2021/06/dsc_3794_optimized-2-scaled.jpg"); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px);
+        z-index: -1;
+      }
+
+      .container {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #ff6f61;
+        font-size: 3em;
+        margin-bottom: 20px;
+      }
+
+      .team-section {
+        margin-top: 40px;
+      }
+
+      h2 {
+        color: #444;
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      .team-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .team-list li {
+        font-size: 1.2em;
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+      }
+
+      .team-list li:hover {
+        background-color: #ff6f61;
+        color: white;
+      }
+
+      .button-container {
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+
+      .image-button {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        font-size: 3.2em;
+        background-color: #ff6f61;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .image-button img {
+        height: 64px;
+        margin-right: 10px;
+      }
+
+      .image-button:hover {
+        background-color: #e55b50;
+      }
+
+      .sub-button {
+        margin-top: 10px;
+        background-color: transparent;
+        color: #777; /* Adjust color to be less prominent */
+        border: none;
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: color 0.3s; /* Apply transition to color */
+      }
+
+      .sub-button:hover {
+        color: #333; /* Darken color on hover for subtle effect */
+      }
+
+      .teacher-info {
+        font-size: 1.2em;
+        color: #777;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kỹ thuật lập trình trong phân tích dữ liệu - CQ.05</h1>
+      <p class="teacher-info">GVHD: ThS. Nguyễn Thế Bảo</p>
+      <div class="team-section">
+        <h2>Team Members</h2>
+        <ul class="team-list">
+          <li>Lê Triều Phương Hiếu: 2124802010360</li>
+          <li>Nguyễn Hoàng Bảo Vương: 2124802010110</li>
+          <li>Nguyễn Anh Tuấn: 2124802010521</li>
+        </ul>
+      </div>
+      <div class="button-container">
+        <button id="news-button" class="image-button">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1792/1792182.png"
+            alt="Spider crawling data"
+          />
+          VIEW CRAWLED DATA NOW!
+        </button>
+        <button id="source-button" class="sub-button">
+          Or view article source
+        </button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    document
+      .getElementById("news-button")
+      .addEventListener("click", function () {
+        window.location.href = "http://127.0.0.1:5000/news";
+      });
+  </script>
+
+  <script>
+    document
+      .getElementById("source-button")
+      .addEventListener("click", function () {
+        window.location.href = "http://127.0.0.1:5000/category";
+      });
+  </script>
+</html>
